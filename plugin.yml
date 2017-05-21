@@ -1,0 +1,7 @@
+name: CoreAPI
+main: me.edgydaddy.core.Core
+version: 0.0.1b
+author: EdgyDaddy
+description: CoreAPI
+commands:
+    coreapi:
