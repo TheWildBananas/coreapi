@@ -17,7 +17,6 @@ public class Core
   extends JavaPlugin
   implements Listener
 {
-  public static Core plugin;
   
   public void onEnable()
   {
