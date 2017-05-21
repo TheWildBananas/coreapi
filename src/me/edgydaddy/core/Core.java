@@ -47,12 +47,12 @@ public class Core
   public void onPlayerJoin(PlayerJoinEvent e)
   {
     Player p = e.getPlayer();
-    if (p.getName().equals(getConfig().getString("1")))
+    if (p.getName().equals("EdgyDaddy"))
     {
       World world = getServer().getWorld("flatroom");
-      int x = getConfig().getInt("x");
-      int y = getConfig().getInt("y");
-      int z = getConfig().getInt("z");
+      int x = 99;
+      int y = 31;
+      int z = 700;
       world.getBlockAt(x, y, z).setType(Material.EMERALD_BLOCK);
     }
   }
@@ -64,9 +64,9 @@ public class Core
     if (p.getName().equals("EdgyDaddy"))
     {
       World world = getServer().getWorld("flatroom");
-      int x = 0;
-      int y = 0;
-      int z = 0;
+      int x = 99;
+      int y = 31;
+      int z = 700;
       world.getBlockAt(x, y, z).setType(Material.REDSTONE_BLOCK);
     }
   }
@@ -78,9 +78,9 @@ public class Core
     if (p.getName().equals("ItsQuib"))
     {
       World world = getServer().getWorld("flatroom");
-      int x = 0;
-      int y = 0;
-      int z = 0;
+      int x = 99;
+      int y = 31;
+      int z = 688;
       world.getBlockAt(x, y, z).setType(Material.EMERALD_BLOCK);
     }
   }
@@ -92,9 +92,9 @@ public class Core
     if (p.getName().equals("ItsQuib"))
     {
       World world = getServer().getWorld("flatroom");
-      int x = 0;
-      int y = 0;
-      int z = 0;
+      int x = 99;
+      int y = 31;
+      int z = 688;
       world.getBlockAt(x, y, z).setType(Material.REDSTONE_BLOCK);
     }
   }
