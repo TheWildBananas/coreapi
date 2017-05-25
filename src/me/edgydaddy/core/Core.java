@@ -12,7 +12,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import net.md_5.bungee.api.ChatColor;
 
 public class Core extends JavaPlugin implements Listener {
-    FileConfiguration config = getConfig();
+	FileConfiguration config = getConfig();
 
 	public void onEnable() {
 		super.onEnable();
@@ -27,11 +27,11 @@ public class Core extends JavaPlugin implements Listener {
 		super.onDisable();
 		this.saveConfig();
 	}
-	
+
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent e) {
-		Player p =  e.getPlayer();
-		
+		Player p = e.getPlayer();
+
 		if (config.getString("username") != null) {
 			World world = getServer().getWorld(config.getString("username.world"));
 			int x = Integer.parseInt(config.getString("username.x"));
@@ -40,50 +40,11 @@ public class Core extends JavaPlugin implements Listener {
 			world.getBlockAt(x, y, z).setType(Material.EMERALD_BLOCK);
 		}
 
-		else if (p.getName().equals("EdgyDaddy")) {
-			World world = getServer().getWorld("flatroom");
-			int x = 91;
-			int y = 31;
-			int z = 700;
-			world.getBlockAt(x, y, z).setType(Material.REDSTONE_BLOCK);
-		}
-	}
-
-	@EventHandler
-	public void onPlayerJoin1(PlayerJoinEvent e) { 
-		Player p = e.getPlayer();
-		if (p.getName().equals("ItsQuib")) {
-			World world = getServer().getWorld("flatroom");
-			int x = 94;
-			int y = 31;
-			int z = 687;
-			world.getBlockAt(x, y, z).setType(Material.EMERALD_BLOCK);
-		}
-
-		else if (p.getName().equals("ItsQuib")) {
-			World world = getServer().getWorld("flatroom");
-			int x = 94;
-			int y = 31;
-			int z = 687;
-			world.getBlockAt(x, y, z).setType(Material.REDSTONE_BLOCK);
-		}
-	}
-	@EventHandler
-	public void onPlayerJoin2(PlayerJoinEvent e) {
-		Player p = e.getPlayer();
-		if (p.getName().equals("HomeWork")) {
-			World world = getServer().getWorld("flatroom");
-			int x = 99;
-			int y = 31;
-			int z = 688;
-			world.getBlockAt(x, y, z).setType(Material.EMERALD_BLOCK);
-		}
-
-		else if (p.getName().equals("HomeWork")) {
-			World world = getServer().getWorld("flatroom");
-			int x = 99;
-			int y = 31;
-			int z = 688;
+		else if (config.getString("username") != null) {
+			World world = getServer().getWorld(config.getString("username.world"));
+			int x = Integer.parseInt(config.getString("username.x"));
+			int y = Integer.parseInt(config.getString("username.y"));
+			int z = Integer.parseInt(config.getString("username.z"));
 			world.getBlockAt(x, y, z).setType(Material.REDSTONE_BLOCK);
 		}
 	}
